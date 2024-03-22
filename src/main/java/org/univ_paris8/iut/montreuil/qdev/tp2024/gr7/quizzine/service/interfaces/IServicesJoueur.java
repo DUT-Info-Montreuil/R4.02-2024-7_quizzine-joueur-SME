@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface IServicesJoueur {
 
-    public JoueurDTO creerJoueur(String prenom, String pseudo, int anneeDeNaissance, Langue langue, List<String> centreInteret) throws AjoutJoueurException;
+    public JoueurDTO creerJoueur(String prenom, String pseudo, int anneeDeNaissance, String langue, List<String> centreInteret) throws AjoutJoueurException;
 }

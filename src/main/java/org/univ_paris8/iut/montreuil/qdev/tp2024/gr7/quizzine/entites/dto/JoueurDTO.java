@@ -10,10 +10,10 @@ public class JoueurDTO {
     private String prenom;
     private String pseudo;
     private int anneeDeNaissance;
-    private Langue langue;
+    private String langue;
     private List<String> centreInteret;
 
-    public JoueurDTO(String prenom, String pseudo, int anneeDeNaissance, Langue langue, List<String> centreInteret) {
+    public JoueurDTO(String prenom, String pseudo, int anneeDeNaissance, String langue, List<String> centreInteret) {
         this.prenom = prenom;
         this.pseudo = pseudo;
         this.anneeDeNaissance = anneeDeNaissance;
@@ -33,7 +33,7 @@ public class JoueurDTO {
         return anneeDeNaissance;
     }
 
-    public Langue getLangue() {
+    public String getLangue() {
         return langue;
     }
 
