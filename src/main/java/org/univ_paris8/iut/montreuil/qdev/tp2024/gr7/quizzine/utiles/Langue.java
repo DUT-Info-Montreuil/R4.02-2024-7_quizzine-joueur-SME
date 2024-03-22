@@ -5,5 +5,5 @@ public enum Langue {
     english,
     deutch,
     espana,
-    italia
+    italia;
 }
