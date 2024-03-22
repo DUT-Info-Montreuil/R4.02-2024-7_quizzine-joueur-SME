@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ServicesJoueursMockAjoutOK implements IServicesJoueur {
     @Override
-    public JoueurDTO creerJoueur(String prenom, String pseudo, int anneeDeNaissance, Langue langue, List<String> centreInteret) throws AjoutJoueurException{
+    public JoueurDTO creerJoueur(String prenom, String pseudo, int anneeDeNaissance, String langue, List<String> centreInteret) throws AjoutJoueurException{
         return new JoueurDTO(prenom,pseudo,anneeDeNaissance, langue,centreInteret);
     }
 }
