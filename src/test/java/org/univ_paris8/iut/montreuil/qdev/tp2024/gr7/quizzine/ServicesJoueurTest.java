@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 import org.univ_paris8.iut.montreuil.qdev.tp2024.gr7.quizzine.entites.dto.JoueurDTO;
 import org.univ_paris8.iut.montreuil.qdev.tp2024.gr7.quizzine.service.ServicesJoueursMockAjoutOK;
+import org.univ_paris8.iut.montreuil.qdev.tp2024.gr7.quizzine.service.impls.ServiceJoueurImpl;
 import org.univ_paris8.iut.montreuil.qdev.tp2024.gr7.quizzine.service.interfaces.IServicesJoueur;
 import org.univ_paris8.iut.montreuil.qdev.tp2024.gr7.quizzine.utiles.*;
 
@@ -16,14 +17,17 @@ class ServicesJoueurTest {
     IServicesJoueur servicesJoueur;
     @Test
     public void testAddJoueur() throws AjoutJoueurException {
-
-        servicesJoueur = new ServicesJoueursMockAjoutOK();
+        servicesJoueur = new ServiceJoueurImpl();
+//        servicesJoueur = new ServicesJoueursMockAjoutOK();
 
         List<String> test = new ArrayList<>();
         test.add("footballe");
         JoueurDTO joueurAttendu = new JoueurDTO("emre","emrebondy",2015, Langue.francais,test);
 //
 //        //tout correct
+//        public void testAddJoueurCorrect(){
+//
+//        }
         JoueurDTO joueurResultat = servicesJoueur.creerJoueur("emre","emrebondy",2015,Langue.francais,test);
         Assertions.assertEquals(joueurAttendu,joueurResultat);
 
